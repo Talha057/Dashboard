@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body class="">
+    <div class="px-2 sm:px-10 border-b-2 flex justify-between items-center">
+      <div class="sm:hidden cursor-pointer" onclick="toggleMenu()">
+        <img src="./assets/hamburger.svg" alt="Hamburger Icon" />
+      </div>
+      <img src="./assets/logo.svg" alt="" />
+      <div class="flex gap-1 sm:gap-3 items-center">
+        <img src="./assets/messageIcon.svg" alt="" />
+        <img  src="./assets/locationIcon.svg" alt="" />
+        <img src="./assets/trophyIcon.svg" alt="" />
+      </div>
+    </div>
+    <div class="grid h-full grid-cols-12">
+      <div
+        class="flex sm:bg-white bg-[#E9F4F9] sm:rounded-none rounded-b-3xl sm:col-span-3 col-span-12 sm:items-start items-center hidden sm:text-[15px] text-[20px] font-bold sm:flex flex-col gap-3 sm:gap-10 sm:border-r-2 sm:pl-5 md:pl-10 sm:py-10 py-5"
+        id="sideMenu"
+      >
+        <a class=" flex items-center gap-5 cursor-pointer"  onclick="menuClick(event)" id="dashboard" href="#">
+          <img src="./assets/turboIcon.svg" alt="" class="hidden sm:block" />
+          <div class="text-[#8AB428]">Dashboard</div>
+        </a>
+        <a class=" flex items-center gap-5 cursor-pointer" onclick="menuClick(event)" id="goals" href="./goals.html">
+          <img src="./assets/goalIcon.svg" alt="" class="hidden sm:block" />
+          <div class="text-[#268EC2] ">Goals</div>
+        </a>
+        <div class="flex items-center gap-5 cursor-pointer" onclick="menuClick(event)" id="courses">
+          <img src="./assets/courseIcon.svg" alt="" class="hidden sm:block" />
+          <div class="text-[#268EC2] ">Courses</div>
+        </div>
+        <div class="flex items-center gap-5 cursor-pointer" onclick="menuClick(event)" id="support">
+          <img src="./assets/supportIcon.svg" alt="" class="hidden sm:block" />
+          <div class="text-[#268EC2] ">Support</div>
+        </div>
+        <div class="flex items-center gap-5 cursor-pointer" onclick="menuClick(event)" id="account">
+          <img src="./assets/userIcon.svg" alt="" class="hidden sm:block" />  
+          <div class="text-[#268EC2] ">Account</div>
+        </div>
+      </div>
+      <div class="sm:col-span-9 col-span-12">
+        <div class="grid grid-cols-12 gap-10 px-10 sm:h-[80%] md:h-[60%] py-10">
+          <div
+            class="md:col-span-6 col-span-12 bg-[#E9F4F9] border-[#757575] border-[1px] flex flex-col justify-center items-center rounded-[38px] border-neutral-500"
+          >
+            <div
+              class="text-[#175574] md:text-[30px] sm:text-[20px] font-extrabold"
+            >
+              Happy Saturday, <span class="font-normal">Terrie!</span>
+            </div>
+    
+            <div class="pie no-round flex justify-center  flex-col items-center" style="--p:90;--c:#8AB428;--b:12px"> 
+              <div class="rounded-full text-[13px] text-center font-semibold ">TODAY’S <br/> GOAL</div>
+              <div class="rounded-full text-[29px] font-bold text-[#8AB428]">9</div>
+              <div class="rounded-full text-[13px] text-[#616161]">9/10 MINS</div></div>
+            
+            
+          </div>
+          <div
+            class="md:col-span-6 col-span-12 bg-[#F3F8EA] border-[#757575] border-[1px] py-2 gap-3 flex flex-col justify-center items-center rounded-[38px] border-neutral-500"
+          >
+            <div class="text-[#175574] text-[24px] font-black">
+              Your <span class="font-normal">Streaks</span>
+            </div>
+            <div
+              class="grid grid-cols-12 w-full gap-5 sm:gap-3 md:gap-5 justify-around"
+            >
+              <div
+                class="items-center bg-[#8AB428] flex col-span-5 col-start-2 rounded-lg py-2 flex-col"
+              >
+                <div class="text-white text-sm">Current</div>
+                <img src="./assets/flame.svg" />
+                <div class="font-bold text-white text-[14px]">1 Day</div>
+              </div>
+              <div
+                class="items-center bg-[#67B0D4] flex col-span-5 rounded-lg py-2 flex-col"
+              >
+                <div class="text-white text-sm">Longest</div>
+                <img src="./assets/flame.svg" />
+                <div class="font-bold text-white text-[14px]">15 Days</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="text-[#175574] text-[18px] font-black">
+                Weekly <span class="font-normal">Activity</span>
+              </div>
+              <div class="text-[#8AB428] text-[13px]">(35 minutes logged)</div>
+            </div>
+            <div class="flex items-center md:gap-2 md:px-5">
+              <div class="flex flex-col items-center">
+                <img src="./assets/yellowFlame.svg" alt="" />
+                <div class="text-[#2280AF] font-bold text-[11px]">SUN</div>
+              </div>
+              <div class="flex flex-col items-center">
+                <img src="./assets/yellowFlame.svg" alt="" />
+                <div class="text-[#2280AF] font-bold text-[11px]">MON</div>
+              </div>
+              <div class="flex flex-col items-center">
+                <img src="./assets/square.svg" alt="" />
+                <div class="text-[#2280AF] font-bold text-[11px]">TUE</div>
+              </div>
+              <div class="flex flex-col items-center">
+                <img src="./assets/yellowFlame.svg" alt="" />
+                <div class="text-[#2280AF] font-bold text-[11px]">WED</div>
+              </div>
+              <div class="flex flex-col items-center">
+                <img src="./assets/yellowFlame.svg" alt="" />
+                <div class="text-[#2280AF] font-bold text-[11px]">THU</div>
+              </div>
+              <div class="flex flex-col items-center">
+                <img src="./assets/square.svg" alt="" />
+                <div class="text-[#2280AF] font-bold text-[11px]">FRI</div>
+              </div>
+              <div class="flex flex-col items-center">
+                <img src="./assets/yellowFlame.svg" alt="" />
+                <div class="text-[#2280AF] font-bold text-[11px]">SAT</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#1B6388]   sm:h-[43%] md:h-[43%]">
+          <div class="flex justify-between items-center px-10 pt-10">
+            <div class="font-bold text-white text-[25px]">
+              Your
+              <span class="font-normal">courses</span>
+            </div>
+            <img src="./assets/paginationDots.svg" />
+          </div>
+          <div class="scroller mx-10 gap-5 py-7">
+            <div class="bg-white rounded-lg space-y-2 px-5 py-3 sm:w-[260px] sm:justify-start w-full justify-center">
+              <div class="gap-5 flex items-center">
+                <img
+                  src="./assets/sliderImg.jfif"
+                  class="rounded-full h-[65px] width-[65px] border-2"
+                />
+                <div>
+                  <div class="font-bold text-[15px] text-[#175574]">
+                    Fair Housing Fundamentals
+                  </div>
+                  <div class="font-normal text-[13px] text-[#175574]">
+                    3 credit hours
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-[#8AB428] text-center text-white font-bold rounded-2xl mx-16 py-1 text-[13px]"
+              >
+                Continue
+              </div>
+            </div>
+            <div class="bg-white rounded-lg space-y-2 px-5 py-3 sm:w-[260px] sm:justify-start w-full justify-center">
+              <div class="gap-5 flex items-center">
+                <img
+                  src="./assets/sliderImg.jfif"
+                  class="rounded-full h-[65px] width-[65px] border-2"
+                />
+                <div>
+                  <div class="font-bold text-[15px] text-[#175574]">
+                    Fair Housing Fundamentals
+                  </div>
+                  <div class="font-normal text-[13px] text-[#175574]">
+                    3 credit hours
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-[#8AB428] text-center text-white font-bold rounded-2xl mx-16 py-1 text-[13px]"
+              >
+                Continue
+              </div>
+            </div>
+            <div class="bg-white rounded-lg space-y-2 px-5 py-3 sm:w-[260px] sm:justify-start w-full justify-center">
+              <div class="gap-5 flex items-center">
+                <img
+                  src="./assets/sliderImg.jfif"
+                  class="rounded-full h-[65px] width-[65px] border-2"
+                />
+                <div>
+                  <div class="font-bold text-[15px] text-[#175574]">
+                    Fair Housing Fundamentals
+                  </div>
+                  <div class="font-normal text-[13px] text-[#175574]">
+                    3 credit hours
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-[#8AB428] text-center text-white font-bold rounded-2xl mx-16 py-1 text-[13px]"
+              >
+                Continue
+              </div>
+            </div>
+            <div class="bg-white rounded-lg space-y-2 px-5 py-3 sm:w-[260px] sm:justify-start w-full justify-center">
+              <div class="gap-5 flex items-center">
+                <img
+                  src="./assets/sliderImg.jfif"
+                  class="rounded-full h-[65px] width-[65px] border-2"
+                />
+                <div>
+                  <div class="font-bold text-[15px] text-[#175574]">
+                    Fair Housing Fundamentals
+                  </div>
+                  <div class="font-normal text-[13px] text-[#175574]">
+                    3 credit hours
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-[#8AB428] text-center text-white font-bold rounded-2xl mx-16 py-1 text-[13px]"
+              >
+                Continue
+              </div>
+            </div>
+            <div class="bg-white rounded-lg space-y-2 px-5 py-3 sm:w-[260px] sm:justify-start w-full justify-center">
+              <div class="gap-5 flex items-center">
+                <img
+                  src="./assets/sliderImg.jfif"
+                  class="rounded-full h-[65px] width-[65px] border-2"
+                />
+                <div>
+                  <div class="font-bold text-[15px] text-[#175574]">
+                    Fair Housing Fundamentals
+                  </div>
+                  <div class="font-normal text-[13px] text-[#175574]">
+                    3 credit hours
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-[#8AB428] text-center text-white font-bold rounded-2xl mx-16 py-1 text-[13px]"
+              >
+                Continue
+              </div>
+            </div>
+            <div class="bg-white rounded-lg space-y-2 px-5 py-3 sm:w-[260px] sm:justify-start w-full justify-center">
+              <div class="gap-5 flex items-center">
+                <img
+                  src="./assets/sliderImg.jfif"
+                  class="rounded-full h-[65px] width-[65px] border-2"
+                />
+                <div>
+                  <div class="font-bold text-[15px] text-[#175574]">
+                    Fair Housing Fundamentals
+                  </div>
+                  <div class="font-normal text-[13px] text-[#175574]">
+                    3 credit hours
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-[#8AB428] text-center text-white font-bold rounded-2xl mx-16 py-1 text-[13px]"
+              >
+                Continue
+              </div>
+            </div>
+            <div class="bg-white rounded-lg space-y-2 px-5 py-3 sm:w-[260px] sm:justify-start w-full justify-center">
+              <div class="gap-5 flex items-center">
+                <img
+                  src="./assets/sliderImg.jfif"
+                  class="rounded-full h-[65px] width-[65px] border-2"
+                />
+                <div>
+                  <div class="font-bold text-[15px] text-[#175574]">
+                    Fair Housing Fundamentals
+                  </div>
+                  <div class="font-normal text-[13px] text-[#175574]">
+                    3 credit hours
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-[#8AB428] text-center text-white font-bold rounded-2xl mx-16 py-1 text-[13px]"
+              >
+                Continue
+              </div>
+            </div>
+            <div class="bg-white rounded-lg space-y-2 px-5 py-3 sm:w-[260px] sm:justify-start w-full justify-center">
+              <div class="gap-5 flex items-center">
+                <img
+                  src="./assets/sliderImg.jfif"
+                  class="rounded-full h-[65px] width-[65px] border-2"
+                />
+                <div>
+                  <div class="font-bold text-[15px] text-[#175574]">
+                    Fair Housing Fundamentals
+                  </div>
+                  <div class="font-normal text-[13px] text-[#175574]">
+                    3 credit hours
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-[#8AB428] text-center text-white font-bold rounded-2xl mx-16 py-1 text-[13px]"
+              >
+                Continue
+              </div>
+            </div>
+           
+          
+        </div>
+      </div>
+    </div>
+    
+    <script src="app.js"></script>
+  </body>
+</html>

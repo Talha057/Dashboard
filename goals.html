@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body class="">
+    <div class="px-2 sm:px-10 border-b-2 flex justify-between items-center">
+      <div class="sm:hidden cursor-pointer" onclick="toggleMenu()">
+        <img src="./assets/hamburger.svg" alt="Hamburger Icon" />
+      </div>
+      <img src="./assets/logo.svg" alt="" />
+      <div class="flex gap-1 sm:gap-3 items-center">
+        <img src="./assets/messageIcon.svg" alt="" />
+        <img  src="./assets/locationIcon.svg" alt="" />
+        <img src="./assets/trophyIcon.svg" alt="" />
+      </div>
+    </div>
+    <div class="grid h-full grid-cols-12">
+      <div
+        class="flex sm:bg-white bg-[#E9F4F9] sm:rounded-none rounded-b-3xl sm:col-span-3 col-span-12 sm:items-start items-center hidden sm:text-[15px] text-[20px] font-bold sm:flex flex-col gap-3 sm:gap-10 sm:border-r-2 sm:pl-5 md:pl-10 sm:py-10 py-5"
+        id="sideMenu"
+      >
+        <a class=" flex items-center gap-5 cursor-pointer"  onclick="menuClick(event)" id="dashboard" href="./dashboard.html">
+          <img src="./assets/blueTurboIcon.svg" alt="" class="hidden sm:block" />
+          <div class="text-[#268EC2]">Dashboard</div>
+        </a>
+        <div class=" flex items-center gap-5 cursor-pointer" onclick="menuClick(event)" id="goals">
+          <img src="./assets/greenGoalIcon.svg" alt="" class="hidden sm:block" />
+          <div class="text-[#8AB428] ">Goals</div>
+        </div>
+        <div class="flex items-center gap-5 cursor-pointer" onclick="menuClick(event)" id="courses">
+          <img src="./assets/courseIcon.svg" alt="" class="hidden sm:block" />
+          <div class="text-[#268EC2] ">Courses</div>
+        </div>
+        <div class="flex items-center gap-5 cursor-pointer" onclick="menuClick(event)" id="support">
+          <img src="./assets/supportIcon.svg" alt="" class="hidden sm:block" />
+          <div class="text-[#268EC2] ">Support</div>
+        </div>
+        <div class="flex items-center gap-5 cursor-pointer" onclick="menuClick(event)" id="account">
+          <img src="./assets/userIcon.svg" alt="" class="hidden sm:block" />  
+          <div class="text-[#268EC2] ">Account</div>
+        </div>
+      </div>
+      <div class="sm:col-span-9 col-span-12 h-full">
+        <div>
+
+        <div class="px-10 mt-20 flex items-center lg:flex-row gap-5  flex-col justify-between ">
+
+            <div class="flex items-center gap-6">
+                
+                <div
+          class="text-[#175574] text-[30px]  font-extrabold"
+        >
+        Current <span class="font-normal">Goals</span>
+    </div>
+    <div class="text-white text-sm bg-[#8AB428] px-5 py-1 flex justify-center items-center rounded-full font-semibold ">Edit Goals</div>
+</div>     
+<div class="bg-[#D4E8F3] rounded-xl text-[#616161] border border-[#1B6388] lg:w-4/12 w-9/12   px-5 text-center py-1"> You are on track to finish by goal date of 4-30-2025.</div>
+</div>
+
+        <div class="grid  grid-cols-12  lg:px-20 px-5 lg:gap-0 gap-10  py-10">
+          <!-- <div
+            class="md:col-span-6 col-span-12 bg-[#E9F4F9] border-[#757575] border-[1px] flex flex-col justify-center items-center rounded-[38px] border-neutral-500"
+          >
+        </div> -->
+            
+            <div class="lg:col-span-3 col-span-4 col-start-3 pie no-round flex justify-center flex-col items-center" style="--p:90;--c:#8AB428;--b:15px"> 
+              <div class="rounded-full text-[13px] text-center font-semibold ">TODAY’S <br/> GOAL</div>
+              <div class="rounded-full text-[22px] font-bold text-[#8AB428]">9</div>
+              <div class="rounded-full text-[13px] text-[#616161]">9/10 MINS</div>
+            </div>
+            <div class="lg:col-span-3 col-span-4  pie no-round flex justify-center flex-col items-center" style="--p:10;--c:#2280AF;--b:15px"> 
+              <div class="rounded-full text-[13px] text-center font-semibold ">WEEKLY</div>
+              <div class="rounded-full text-[22px] font-bold text-[#2280AF]">10%</div>
+              <div class="rounded-full text-[13px] text-[#616161]">2/15 MINS</div>
+            </div>
+            <div class="lg:col-span-3 col-span-4 col-start-3 pie  no-round flex justify-center flex-col items-center" style="--p:20;--c:#6762A6;--b:15px"> 
+              <div class="rounded-full text-[13px] text-center font-semibold ">MONTHLY</div>
+              <div class="rounded-full text-[22px] font-bold text-[#6762A6]">20%
+              </div>
+              <div class="rounded-full text-[13px] text-[#616161]">10/30 MINS</div></div>
+            <div class="lg:col-span-3 col-span-4 pie  no-round flex justify-center flex-col items-center" style="--p:10;--c:#EA4C89;--b:15px"> 
+              <div class="rounded-full text-[13px] text-center font-semibold ">OVERALL</div>
+              <div class="rounded-full text-[22px] font-bold text-[#EA4C89]">10%</div>
+              <div class="rounded-full text-[13px] text-[#616161]">120/1200 MINS</div></div>
+            
+            
+        
+        </div>
+      </div>
+
+        <div class="bg-[#E9F4F9] ">
+          <div class="flex items-center gap-6">
+                
+            <div
+      class="text-[#175574] text-[30px]  font-extrabold px-10 py-5"
+    >
+    CE <span class="font-normal">Progress</span>
+</div>
+</div>
+<div class="px-20 py-5 ">
+  <div class="flex justify-between items-center py-3">
+    <div class="md:w-[40%] w-[30%] flex lg:items-stretch gap-2 items-center flex-col">
+      <div class="flex items-center gap-1">
+        <div class="py-4 px-9 rounded-full bg-[#6762A6]"></div>
+        <img src="./assets/Rabbit.svg" alt="">
+      </div>
+      <div class="flex items-center justify-between text-[#9E9E9E] font-bold text-[12px] lg:flex-row flex-col text-center">
+        <div>AGENCY LAW</div>
+        <div>3 HOURS</div>
+      </div>
+    </div>
+    <div class="md:w-[40%] w-[30%] flex lg:items-stretch gap-2 items-center flex-col">
+      <div class="flex items-center gap-1">
+        <div class="py-4 px-9 rounded-full bg-[#E50914]"></div>
+        <img src="./assets/redRabbit.svg" alt="">
+      </div>
+      <div class="flex items-center justify-between text-[#9E9E9E] font-bold text-[12px] lg:flex-row flex-col text-center">
+        <div>CONTRACT LAW</div>
+        <div>3 HOURS</div>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-between items-center py-3">
+    <div class="md:w-[40%] w-[30%] flex lg:items-stretch gap-2 items-center flex-col">
+      <div class="flex items-center gap-1">
+        <div class="py-4 px-9 rounded-full bg-[#EA4C89]"></div>
+        <img src="./assets/pinkRabbit.svg" alt="">
+      </div>
+      <div class="flex items-center justify-between text-[#9E9E9E] font-bold text-[12px] lg:flex-row flex-col text-center">
+        <div>COMMISSIONER’S STANDARDS</div>
+        <div>3 HOURS</div>
+      </div>
+    </div>
+    <div class="md:w-[40%] w-[30%] flex lg:items-stretch gap-2 items-center flex-col">
+      <div class="flex items-center gap-1">
+        <div class="py-4 px-16 rounded-full bg-[#8AB428]"></div>
+        <img src="./assets/greenRabbit.svg" alt="">
+      </div>
+      <div class="flex items-center justify-between text-[#9E9E9E] font-bold text-[12px] lg:flex-row flex-col text-center">
+        <div>FAIR HOUSING ISSUES</div>
+        <div>3 HOURS</div>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-between items-center py-3">
+    <div class="md:w-[40%] w-[30%] flex lg:items-stretch gap-2 items-center flex-col">
+      <div class="flex items-center gap-1">
+        <div class="py-4 px-9 rounded-full bg-[#6ECADC]"></div>
+        <img src="./assets/lightblueRabbit.svg" alt="">
+      </div>
+      <div class="flex items-center justify-between text-[#9E9E9E] font-bold text-[12px] lg:flex-row flex-col text-center">
+        <div>DISCLOSURES</div>
+        <div>3 HOURS</div>
+      </div>
+    </div>
+    <div class="md:w-[40%] w-[30%] flex lg:items-stretch gap-2 items-center flex-col">
+      <div class="flex justify-end text-[#9E9E9E] text-[12px]">no activity logged</div>
+      <div class="flex items-center justify-between text-[#9E9E9E] font-bold text-[12px] lg:flex-row flex-col text-center">
+        <div>GENERAL / ALL</div>
+        <div>6 HOURS</div>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-between items-center py-3">
+    <div class="md:w-[40%] w-[30%] flex lg:items-stretch gap-2 items-center flex-col">
+      <div class="flex items-center gap-1">
+        <div class="py-4 px-20 rounded-full bg-[#3B5998]"></div>
+        <img src="./assets/darkblueRabbit.svg" alt="">
+      </div>
+      <div class="flex items-center justify-between text-[#9E9E9E] font-bold text-[12px] lg:flex-row flex-col text-center">
+        <div>CONTRACT LAW</div>
+        <div>3 HOURS</div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+       
+    </div>
+    
+    <script src="app.js"></script>
+  </body>
+</html>
