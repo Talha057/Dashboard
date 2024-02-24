@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body class="">
+    <div class="px-2 sm:px-10 border-b-2 flex justify-between items-center">
+      <div class="sm:hidden cursor-pointer" onclick="toggleMenu()">
+        <img src="./assets/hamburger.svg" alt="Hamburger Icon" />
+      </div>
+      <img src="./assets/logo.svg" alt="" />
+      <div class="flex gap-1 sm:gap-3 items-center">
+        <img src="./assets/messageIcon.svg" alt="" />
+        <img  src="./assets/locationIcon.svg" alt="" />
+        <img src="./assets/trophyIcon.svg" alt="" />
+      </div>
+    </div>
+    <div class="grid h-full grid-cols-12">
+      <div
+        class="flex sm:bg-white bg-[#E9F4F9] sm:rounded-none rounded-b-3xl sm:col-span-3 col-span-12 sm:items-start items-center hidden sm:text-[15px] text-[20px] font-bold sm:flex flex-col gap-3 sm:gap-10 sm:border-r-2 sm:pl-5 md:pl-10 sm:py-10 py-5"
+        id="sideMenu"
+      >
+        <a class=" flex items-center gap-5 cursor-pointer"  onclick="menuClick(event)" id="dashboard" href="./dashboard.html">
+          <img src="./assets/blueTurboIcon.svg" alt="" class="hidden sm:block" />
+          <div class="text-[#268EC2]">Dashboard</div>
+        </a>
+        <div class=" flex items-center gap-5 cursor-pointer" onclick="menuClick(event)" id="goals">
+          <img src="./assets/goalIcon.svg" alt="" class="hidden sm:block" />
+          <div class="text-[#268EC2] ">Goals</div>
+        </div>
+        <div class="flex items-center gap-5 cursor-pointer" onclick="menuClick(event)" id="courses">
+          <img src="./assets/greenCourseIcon.svg" alt="" class="hidden sm:block" />
+          <div class="text-[#8AB428] ">Courses</div>
+        </div>
+        <div class="flex items-center gap-5 cursor-pointer" onclick="menuClick(event)" id="support">
+          <img src="./assets/supportIcon.svg" alt="" class="hidden sm:block" />
+          <div class="text-[#268EC2] ">Support</div>
+        </div>
+        <div class="flex items-center gap-5 cursor-pointer" onclick="menuClick(event)" id="account">
+          <img src="./assets/userIcon.svg" alt="" class="hidden sm:block" />  
+          <div class="text-[#268EC2] ">Account</div>
+        </div>
+      </div>
+      <div class="sm:col-span-9 col-span-12 h-full">
+
+      <div class="bg-[#E9F4F9] h-full">
+        <div class="px-10 pt-10">
+            <div
+            class="text-[#175574] text-[30px]  font-extrabold"
+          >
+          Available <span class="font-normal text-[28px]">Courses</span>
+      </div>
+      <div class="flex items-center gap-2 pt-5">
+
+      <select name="All Categories" id="all Categories" class="px-2 py-1 rounded-lg border border-[#B8BBC2] w-3/12 text-[#0F394E] font-semibold text-[12px]" >
+
+        <option value="all Categories">All Categories</option>
+        <option value="cyber security">Cyber Security</option>
+        <option value="development">Development</option>
+        <option value="marketing">Marketing</option>
+      </select>
+      <div
+      class="bg-[#8AB428] text-center text-white font-bold rounded-2xl px-3 py-1 text-[13px]"
+    >
+      Filter
+    </div>
+
+    </div>
+
+        </div>
+        <div class="grid grid-cols-12 px-10 gap-10 py-10">
+          <div class="bg-white rounded-lg space-y-2 p-5 flex  flex-col items-center  justify-center lg:col-span-4 col-span-6 overflow-hidden ">
+            <div class="lg:gap-5 gap-2 flex items-center ">
+              <img
+                src="./assets/coursesPic.jfif"
+                class="rounded-full h-[65px] width-[65px] border-2 border-[#A1C353]"
+              />
+              <div >
+                <div class="font-bold lg:text-[15px] text-[13px] text-[#175574]">
+                  Fair Housing Fundamentals
+                </div>
+                <div class="font-normal text-[13px] text-[#175574]">
+                  3 credit hours
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-[#6762A6] text-center text-white font-bold rounded-2xl px-3 py-1 text-[13px]"
+            >
+              Start
+            </div>
+          </div>
+          <div class="bg-white rounded-lg space-y-2 p-5  flex  flex-col items-center  justify-center lg:col-span-4 col-span-6 overflow-hidden ">
+            <div class="gap-5 flex items-center">
+              <img
+                src="./assets/coursesPic.jfif"
+                class="rounded-full h-[65px] width-[65px] border-2 border-[#A1C353]"
+              />
+              <div>
+                <div class="font-bold text-[15px] text-[#175574]">
+                  Fair Housing Fundamentals
+                </div>
+                <div class="font-normal text-[13px] text-[#175574]">
+                  3 credit hours
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-[#8AB428] text-center text-white font-bold rounded-2xl px-2 py-1 text-[13px]"
+            >
+              Continue
+            </div>
+          </div>
+          <div class="bg-white rounded-lg space-y-2 p-5  flex  flex-col items-center  justify-center lg:col-span-4 col-span-6 overflow-hidden ">
+            <div class="gap-5 flex items-center">
+              <img
+                src="./assets/coursesPic.jfif"
+                class="rounded-full h-[65px] width-[65px] border-2 border-[#A1C353]"
+              />
+              <div>
+                <div class="font-bold text-[15px] text-[#175574]">
+                  Fair Housing Fundamentals
+                </div>
+                <div class="font-normal text-[13px] text-[#175574]">
+                  3 credit hours
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-[#8AB428] text-center text-white font-bold rounded-2xl px-2 py-1 text-[13px]"
+            >
+              Continue
+            </div>
+          </div>
+          <div class="bg-white rounded-lg space-y-2 p-5  flex  flex-col items-center  justify-center lg:col-span-4 col-span-6 overflow-hidden ">
+            <div class="gap-5 flex items-center">
+              <img
+                src="./assets/coursesPic.jfif"
+                class="rounded-full h-[65px] width-[65px] border-2 border-[#A1C353]"
+              />
+              <div>
+                <div class="font-bold text-[15px] text-[#175574]">
+                    Commissioner’s
+                    Standards
+                </div>
+                <div class="font-normal text-[13px] text-[#175574]">
+                  3 credit hours
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-[#268EC2] text-center text-white font-bold rounded-2xl px-3 py-1 text-[13px]"
+            >
+              Details
+            </div>
+          </div>
+          <div class="bg-white rounded-lg space-y-2 p-5  flex  flex-col items-center  justify-center lg:col-span-4 col-span-6  overflow-hidden">
+            <div class="gap-5 flex items-center">
+              <img
+                src="./assets/coursesPic.jfif"
+                class="rounded-full h-[65px] width-[65px] border-2 border-[#A1C353]"
+              />
+              <div>
+                <div class="font-bold text-[15px] text-[#175574]">
+                  Fair Housing Fundamentals
+                </div>
+                <div class="font-normal text-[13px] text-[#175574]">
+                  3 credit hours
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-[#8AB428] text-center text-white font-bold rounded-2xl px-2 py-1 text-[13px]"
+            >
+              Continue
+            </div>
+          </div>
+          <div class="bg-white rounded-lg space-y-2 p-5  flex  flex-col items-center  justify-center lg:col-span-4 col-span-6  overflow-hidden">
+            <div class="gap-5 flex items-center">
+              <img
+                src="./assets/coursesPic.jfif"
+                class="rounded-full h-[65px] width-[65px] border-2 border-[#A1C353]"
+              />
+              <div>
+                <div class="font-bold text-[15px] text-[#175574]">
+                  Fair Housing Fundamentals
+                </div>
+                <div class="font-normal text-[13px] text-[#175574]">
+                  3 credit hours
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-[#8AB428] text-center text-white font-bold rounded-2xl px-2 py-1 text-[13px]"
+            >
+              Continue
+            </div>
+          </div>
+          <div class="bg-white rounded-lg space-y-2 p-5  flex  flex-col items-center  justify-center lg:col-span-4 col-span-6 overflow-hidden ">
+            <div class="gap-5 flex items-center">
+              <img
+                src="./assets/coursesPic.jfif"
+                class="rounded-full h-[65px] width-[65px] border-2 border-[#A1C353]"
+              />
+              <div>
+                <div class="font-bold text-[15px] text-[#175574]">
+                  Fair Housing Fundamentals
+                </div>
+                <div class="font-normal text-[13px] text-[#175574]">
+                  3 credit hours
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-[#8AB428] text-center text-white font-bold rounded-2xl px-2 py-1 text-[13px]"
+            >
+              Continue
+            </div>
+          </div>
+          <div class="bg-white rounded-lg space-y-2 p-5  flex  flex-col items-center  justify-center lg:col-span-4 col-span-6  overflow-hidden">
+            <div class="gap-5 flex items-center">
+              <img
+                src="./assets/coursesPic.jfif"
+                class="rounded-full h-[65px] width-[65px] border-2 border-[#A1C353]"
+              />
+              <div>
+                <div class="font-bold text-[15px] text-[#175574]">
+                  Fair Housing Fundamentals
+                </div>
+                <div class="font-normal text-[13px] text-[#175574]">
+                  3 credit hours
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-[#8AB428] text-center text-white font-bold rounded-2xl px-2 py-1 text-[13px]"
+            >
+              Continue
+            </div>
+          </div>
+         
+        
+      </div>
+    </div>
+</div>
+
+      
+
+      
+      <script src="app.js"></script>
+  </body>
+</html>
