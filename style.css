@@ -5,8 +5,6 @@
 html,
 body {
   /* min-width: max-content; */
-  width: 100%;
-  min-width: max-content;
   height: 100%;
   margin: 0;
 }
