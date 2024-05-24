@@ -1,6 +1,6 @@
 # Talha's Dashboard
 
-Welcome to Talha's Dashboard! This web application is responsive for visualizing data.
+Welcome to Talha's Dashboard! This responsive web application is for visualizing data.
 
 ## Overview
 
