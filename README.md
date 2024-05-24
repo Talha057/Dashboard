@@ -1,6 +1,6 @@
 # Talha's Dashboard
 
-Welcome to Talha's Dashboard! This web application serves as a customizable dashboard where users can organize and visualize their data in a personalized manner.
+Welcome to Talha's Dashboard! This web application is responsive for visualizing data.
 
 ## Overview
 
